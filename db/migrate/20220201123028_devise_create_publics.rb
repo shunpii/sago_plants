@@ -32,7 +32,15 @@ class DeviseCreatePublics < ActiveRecord::Migration[5.2]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-
+      t.string :last_name
+      t.string :first_name
+      t.string :last_name_kana
+      t.string :first_name_kana
+      t.string :postal_code
+      t.string :address
+      t.datetime :created_at
+      t.datetime :updated_at
+      
       t.timestamps null: false
     end
 
