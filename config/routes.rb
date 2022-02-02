@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope module: :public do
-    root to: "homes#top"
+    get "top"
     devise_for :publics, path: "public", controller: {
       registrations: "publics/registrations",
       sessions: "publics/sessions"
