@@ -1,0 +1,26 @@
+.login {
+  text-align: center;
+}
+.login__title {
+  font-size: 35px;
+}
+.login__content {
+  margin: auto;
+}
+.login__content--item {
+  padding-right: 30px;
+  text-align: left;
+  font-size: 30px;
+  font-weight: normal;
+}
+.login__content--form {
+  height: 20px;
+  width: 200px;
+}
+.login__action {
+  margin-top: 20px;
+}
+.login__action--btn {
+  padding: 5px 50px;
+  font-size: 20px;
+}
