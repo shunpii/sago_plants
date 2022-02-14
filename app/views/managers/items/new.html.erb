@@ -1,25 +1,27 @@
 <div class="new-item">
-  <h1>新規商品</h1>
-  <%= form_with modle: @item, url: managers_items_show_path, local:true do |f| %>
+  <h1>新規出品</h1>
+  <%= form_with model: @item, url: managers_items_path, local:true do |f| %>
     <table>
       <tr>
-        <th class="new-item__item">商品名</th>
-        <td class="new-item__item--content"><%= f.text_field :name, class: "new-item__item--name-form" %></td>
+        <th>商品名</th>
+        <td><%= f.text_field :name %></td>
       </tr>
       <tr>
-        <th class="new-item__item">商品説明</th>
-        <td class="new-item__item--content"><%= f.text_area :introduction, class: "new-item__item--introduction-form" %></td>
+        <th>商品説明</th>
+        <td><%= f.text_area :introduction %></td>
       </tr>
       <tr>
-        <th class="new-item__item">サイズ</th>
-        <td class="new-item__item--content">H: <%= f.text_field :size_height, class: "new-item__item--size-form" %>cm W: <%= f.text_field :size_width, class: "new-item__item--size-form" %>cm</td>
+        <th>サイズ</th>
+        <td>
+          H: <%= f.text_field :size_height %></br>
+          W: <%= f.text_field :size_width %>
+        </td>
       </tr>
       <tr>
-        <th class="new-item__item">税込価格</th>
-        <td class="new-item__item--content"><%= f.text_field :price, class: "new-item__item--price-form" %> 円</td>
+        <th>価格</th>
+        <td><%= f.text_field :price %></td>
       </tr>
     </table>
-    <div class="new-item__action"><%= f.submit %></div>
+    <%= f.submit '出品' %>
   <% end %>
 </div>
-

@@ -6,7 +6,7 @@ class Managers::ItemsController < ApplicationController
   def create
     item = Item.new(item_params)
     item.save
-    redirect_to '/index'
+    redirect_to managers_items_path
   end
 
   def index
@@ -20,6 +20,6 @@ class Managers::ItemsController < ApplicationController
   
   private
   def item_params
-    params.require(:item).permit(:name, :introduction, :price, :size_height, :size_width, item_images_images: [])
+    params.require(:item).permit(:name, :introduction, :size_height, :size_width, :price)
   end
 end
