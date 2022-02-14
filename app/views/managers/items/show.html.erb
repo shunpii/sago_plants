@@ -21,3 +21,6 @@
     <td><%= @item.price %></td>
   </tr>
 </table>
+
+<%= link_to '編集', edit_managers_item_path(@item.id) %>
+<%= link_to '一覧', managers_items_path %>
