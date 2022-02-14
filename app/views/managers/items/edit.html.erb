@@ -1,2 +1,26 @@
-<h1>Managers::Items#edit</h1>
-<p>Find me in app/views/managers/items/edit.html.erb</p>
+<h1>商品編集</h1>
+<%= form_with model: @item, url: managers_item_path, local:true do |f| %>
+    <table>
+      <tr>
+        <th>商品名</th>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <th>商品説明</th>
+        <td><%= f.text_area :introduction %></td>
+      </tr>
+      <tr>
+        <th>サイズ</th>
+        <td>
+          H: <%= f.text_field :size_height %></br>
+          W: <%= f.text_field :size_width %>
+        </td>
+      </tr>
+      <tr>
+        <th>価格</th>
+        <td><%= f.text_field :price %></td>
+      </tr>
+    </table>
+    <%= f.submit '出品' %>
+    <%= link_to '戻る', managers_item_path(@item.id) %>
+  <% end %>
