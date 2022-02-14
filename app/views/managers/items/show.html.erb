@@ -1,2 +1,23 @@
-<h1>Managers::Items#show</h1>
-<p>Find me in app/views/managers/items/show.html.erb</p>
+<h1>商品詳細</h1>
+
+<table>
+  <tr>
+    <th>商品名</th>
+    <td><%= @item.name %></td>
+  </tr>
+  <tr>
+    <th>商品説明</th>
+    <td><%= @item.introduction %></td>
+  </tr>
+  <tr>
+    <th>サイズ</th>
+    <td>
+      H: <%= @item.size_height %></br>
+      W: <%= @item.size_width %>
+    </td>
+  </tr>
+  <tr>
+    <th>価格</th>
+    <td><%= @item.price %></td>
+  </tr>
+</table>

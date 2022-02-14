@@ -4,9 +4,9 @@ class Managers::ItemsController < ApplicationController
   end
   
   def create
-    item = Item.new(item_params)
-    item.save
-    redirect_to managers_items_path
+    @item = Item.new(item_params)
+    @item.save
+    redirect_to managers_item_path(@item.id)
   end
 
   def index
@@ -14,6 +14,7 @@ class Managers::ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
   end
 
   def edit
