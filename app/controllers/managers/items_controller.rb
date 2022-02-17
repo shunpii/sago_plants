@@ -29,6 +29,6 @@ class Managers::ItemsController < ApplicationController
   
   private
   def item_params
-    params.require(:item).permit(:name, :introduction, :size_height, :size_width, :price)
+    params.require(:item).permit(:name, :introduction, :size_height, :size_width, :price, item_images_images: [])
   end
 end

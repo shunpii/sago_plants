@@ -3,6 +3,10 @@
   <%= form_with model: @item, url: managers_items_path, local:true do |f| %>
     <table>
       <tr>
+        <th></th>
+        <td><%= f.attachment_field :item_images_images %></td>
+      </tr>
+      <tr>
         <th>商品名</th>
         <td><%= f.text_field :name %></td>
       </tr>
